@@ -7,6 +7,9 @@ export default {
   args: {
     children: 'Enviar',
   },
+  parameters: {
+    layout: 'centered',
+  },
 } as Meta<ButtonProps>
 
 export const Primary: StoryObj<ButtonProps> = {}
