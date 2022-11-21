@@ -8,7 +8,5 @@
     "@visum-ui/tokens": "1.0.0",
     "@visum-ui/ts-config": "1.0.0"
   },
-  "changesets": [
-    "cyan-worms-own"
-  ]
+  "changesets": ["cyan-worms-own"]
 }
