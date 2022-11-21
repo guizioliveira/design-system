@@ -31,6 +31,9 @@ export default {
     },
     onClick: { action: 'clicked' },
   },
+  parameters: {
+    layout: 'centered',
+  },
 } as Meta<ButtonProps>
 
 export const Primary: StoryObj<ButtonProps> = {}
