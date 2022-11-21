@@ -1,5 +1,11 @@
 # @visum-ui/tokens
 
+## 1.2.0
+
+### Minor Changes
+
+- Testing
+
 ## 1.1.0
 
 ### Minor Changes
