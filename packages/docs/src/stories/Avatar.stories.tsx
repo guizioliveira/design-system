@@ -4,10 +4,14 @@ import { Avatar, AvatarProps } from '@visum-ui/react'
 export default {
   title: 'data display/Avatar',
   component: Avatar,
-
   args: {
     src: 'https://github.com/guizioliveira.png',
     alt: 'Guilherme de Oliveira',
+  },
+  argTypes: {
+    control: {
+      type: 'text',
+    },
   },
   parameters: {
     layout: 'centered',

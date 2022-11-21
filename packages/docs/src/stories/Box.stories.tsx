@@ -4,7 +4,13 @@ import { Box, BoxProps, Text } from '@visum-ui/react'
 export default {
   title: 'Layout/Box',
   component: Box,
-
+  argTypes: {
+    children: {
+      control: {
+        type: null,
+      },
+    },
+  },
   args: {
     children: <Text>Component Box test</Text>,
   },
