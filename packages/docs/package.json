@@ -29,7 +29,7 @@
     "@storybook/addon-a11y": "^6.5.13",
     "@visum-ui/eslint-config": "*",
     "@visum-ui/react": "*",
-    "@visum-ui/tokens": "*",
+    "@visum-ui/tokens": "1.1.0-alpha.0",
     "phosphor-react": "^1.4.1",
     "polished": "^4.2.2",
     "react": "^18.2.0",
