@@ -1,5 +1,5 @@
 {
-  "name": "@ignite-ui/docs",
+  "name": "@visum-ui/docs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -24,9 +24,9 @@
     "vite": "^3.1.7"
   },
   "dependencies": {
-    "@ignite-ui/eslint-config": "*",
-    "@ignite-ui/react": "*",
-    "@ignite-ui/tokens": "*",
+    "@visum-ui/eslint-config": "*",
+    "@visum-ui/react": "*",
+    "@visum-ui/tokens": "*",
     "phosphor-react": "^1.4.1",
     "polished": "^4.2.2",
     "react": "^18.2.0",
