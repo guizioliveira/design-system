@@ -5,10 +5,16 @@
   ],
   "scripts": {
     "dev": "turbo run dev --parallel",
-    "build": "turbo run build"
+    "build": "turbo run build",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "pre-release": "pre enter alpha && changeset",
+    "release": "turbo run build --filter=!docs && changeset"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.25.2"
   },
   "dependencies": {
-    "@changesets/cli": "^2.25.2",
     "turbo": "^1.6.3"
   }
 }
