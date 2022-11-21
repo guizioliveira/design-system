@@ -1,5 +1,11 @@
 # @visum-ui/tokens
 
+## 1.4.0-alpha.0
+
+### Minor Changes
+
+- Removing extra font-size
+
 ## 1.3.0
 
 ### Minor Changes
