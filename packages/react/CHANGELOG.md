@@ -1,4 +1,4 @@
-# @visum-ui/tokens
+# @visum-ui/react
 
 ## 1.0.0
 
