@@ -9,8 +9,8 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "exit-pre-release": "changeset pre exit",
-    "pre-release": "changeset pre enter alpha && changeset",
-    "release": "turbo run build --filter=!docs && changeset"
+    "pre-release": "changeset pre enter alpha",
+    "release": "turbo run build --filter=!docs && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.25.2"
