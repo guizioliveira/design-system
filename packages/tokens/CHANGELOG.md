@@ -1,5 +1,11 @@
 # @visum-ui/tokens
 
+## 1.3.0
+
+### Minor Changes
+
+- ec7388f: Adding new font-size
+
 ## 1.3.0-alpha.0
 
 ### Minor Changes
