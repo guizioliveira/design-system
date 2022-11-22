@@ -1,4 +1,4 @@
-# @visum-ui/tokens
+# @guizioliveira/tokens
 
 ## 1.7.0
 

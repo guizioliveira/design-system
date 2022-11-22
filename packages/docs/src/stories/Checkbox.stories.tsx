@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Box, Text, Checkbox, CheckboxProps } from '@visum-ui/react'
+import { Box, Text, Checkbox, CheckboxProps } from '@guizioliveira/react'
 
 export default {
   title: 'Form/Checkbox',

@@ -6,7 +6,7 @@ import {
   lineHeights,
   radii,
   space,
-} from '@visum-ui/tokens'
+} from '@guizioliveira/tokens'
 import { createStitches, defaultThemeMap } from '@stitches/react'
 
 export const {

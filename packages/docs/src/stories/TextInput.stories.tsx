@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Box, Text, TextInput, TextInputProps } from '@visum-ui/react'
+import { Box, Text, TextInput, TextInputProps } from '@guizioliveira/react'
 
 export default {
   title: 'Form/Text Input',

@@ -1,4 +1,4 @@
-import { colors, space, fontSizes } from '@visum-ui/tokens'
+import { colors, space, fontSizes } from '@guizioliveira/tokens'
 import { getContrast } from 'polished'
 
 export function ColorsGrid() {

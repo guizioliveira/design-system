@@ -1,4 +1,4 @@
-# @visum-ui/react
+# @guizioliveira/react
 
 ## 1.1.0
 

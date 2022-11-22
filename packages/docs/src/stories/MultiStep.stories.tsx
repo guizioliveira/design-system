@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Box, MultiStep, MultiStepProps } from '@visum-ui/react'
+import { Box, MultiStep, MultiStepProps } from '@guizioliveira/react'
 
 export default {
   title: 'Form/Multi Step',

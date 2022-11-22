@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { Box, BoxProps, Text } from '@visum-ui/react'
+import { Box, BoxProps, Text } from '@guizioliveira/react'
 
 export default {
   title: 'Layout/Box',

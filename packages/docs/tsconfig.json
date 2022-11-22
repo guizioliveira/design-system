@@ -1,4 +1,4 @@
 {
-  "extends": "@visum-ui/ts-config/react.json",
+  "extends": "@guizioliveira/ts-config/react.json",
   "include": ["src"]
 }

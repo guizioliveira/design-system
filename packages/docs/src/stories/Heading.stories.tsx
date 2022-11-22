@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { Heading, HeadingProps } from '@visum-ui/react'
+import { Heading, HeadingProps } from '@guizioliveira/react'
 
 export default {
   title: 'Typography/Heading',
