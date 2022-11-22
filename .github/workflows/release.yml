@@ -21,6 +21,8 @@ jobs:
           node-version: 16
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
+          registry-url: 'https://npm.pkg.github.com/'
+          scope: '@guizioliveira'
 
       - run: npm ci
 
