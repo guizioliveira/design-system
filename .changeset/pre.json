@@ -9,6 +9,7 @@
     "@visum-ui/ts-config": "1.0.0"
   },
   "changesets": [
-    "lovely-wolves-worry"
+    "lovely-wolves-worry",
+    "soft-vans-eat"
   ]
 }
