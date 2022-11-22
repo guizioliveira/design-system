@@ -1,8 +1,5 @@
 name: Release
 
-permissions:
-  packages: write # for publish
-
 on:
   push:
     branches:
