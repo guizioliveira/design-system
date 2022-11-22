@@ -1,5 +1,11 @@
 # @visum-ui/tokens
 
+## 1.7.0-alpha.0
+
+### Minor Changes
+
+- Adding `brand` color
+
 ## 1.6.0
 
 ### Minor Changes

@@ -4,6 +4,8 @@ export const colors = {
   primary700: '#015F43',
   primary900: '#00291D',
 
+  brand: '#EA0000',
+
   white: '#FFF',
   black: '#000',
 
