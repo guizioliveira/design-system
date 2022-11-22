@@ -26,7 +26,7 @@ jobs:
           TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           TURBO_TEAM: visum
 
-      - name: Deploy storybook alpha
+      - name: Deploy storybook to Github Pages
         working-directory: ./packages/docs
         run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
         env:

@@ -1,5 +1,11 @@
 # @visum-ui/tokens
 
+## 1.6.0
+
+### Minor Changes
+
+- 76bc3e5: New bold font
+
 ## 1.6.0-alpha.0
 
 ### Minor Changes
