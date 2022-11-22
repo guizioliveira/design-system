@@ -1,6 +1,6 @@
 {
   "name": "@guizioliveira/ignite-ui-tokens",
-  "version": "0.0.0",
+  "version": "1.0.0-alpha.0",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -13,10 +13,10 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-    "repository": {
-      "type": "git",
-      "url": "ssh://git@github.com/user/repo.git",
-      "directory": "packages/tokens"
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/user/repo.git",
+    "directory": "packages/tokens"
   },
   "keywords": [],
   "author": "",
