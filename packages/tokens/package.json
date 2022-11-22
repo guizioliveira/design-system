@@ -10,9 +10,13 @@
     "dev": "tsup src/index.ts --format esm, cjs --dts --watch",
     "lint": "eslint src/**/*.ts* --fix"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/guizioliveira/design-system"
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+    "repository": {
+      "type": "git",
+      "url": "ssh://git@github.com/user/repo.git",
+      "directory": "packages/tokens"
   },
   "keywords": [],
   "author": "",
