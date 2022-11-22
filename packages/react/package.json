@@ -1,6 +1,6 @@
 {
-  "name": "@guizioliveira/react",
-  "version": "1.1.0",
+  "name": "@guizioliveira/ignite-ui-react",
+  "version": "0.0.0",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -24,9 +24,9 @@
   "devDependencies": {
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "@guizioliveira/eslint-config": "*",
-    "@guizioliveira/tokens": "1.7.0",
-    "@guizioliveira/ts-config": "*",
+    "@guizioliveira/ignite-ui-eslint-config": "*",
+    "@guizioliveira/ignite-ui-tokens": "*",
+    "@guizioliveira/ignite-ui-ts-config": "*",
     "react": "^18.2.0",
     "tsup": "^6.2.3",
     "typescript": "^4.8.4"

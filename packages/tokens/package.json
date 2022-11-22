@@ -1,6 +1,6 @@
 {
-  "name": "@guizioliveira/tokens",
-  "version": "1.7.0",
+  "name": "@guizioliveira/ignite-ui-tokens",
+  "version": "0.0.0",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -22,8 +22,8 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@guizioliveira/ts-config": "*",
-    "@guizioliveira/eslint-config": "*",
+    "@guizioliveira/ignite-ui-ts-config": "*",
+    "@guizioliveira/ignite-ui-eslint-config": "*",
     "tsup": "^6.2.3",
     "typescript": "^4.8.4"
   }
