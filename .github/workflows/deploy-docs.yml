@@ -26,7 +26,6 @@ jobs:
           TURBO_TEAM: visum
 
       - name: Deploy storybook alpha
-        if: "github.event.release.prerelease == true"
         working-directory: ./packages/docs
         run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
         env:

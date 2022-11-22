@@ -1,5 +1,11 @@
 # @visum-ui/tokens
 
+## 1.5.0
+
+### Minor Changes
+
+- 7d8c5a9: Changing code font
+
 ## 1.5.0-alpha.0
 
 ### Minor Changes
