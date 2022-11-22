@@ -7,7 +7,7 @@
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
     "changeset": "changeset",
-    "exit-prerelease": "changeset pre exit && changeset",
+    "exit-prerelease": "changeset pre exit",
     "pre-release": "changeset pre enter alpha && changeset",
     "release": "turbo run build --filter=!docs && changeset publish"
   },
