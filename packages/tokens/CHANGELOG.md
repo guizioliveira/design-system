@@ -1,5 +1,11 @@
 # @guizioliveira/ignite-ui-tokens
 
+## 1.1.0-alpha.1
+
+### Minor Changes
+
+- Adding new colors
+
 ## 1.1.0-alpha.0
 
 ### Minor Changes

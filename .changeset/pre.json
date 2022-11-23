@@ -9,6 +9,7 @@
     "@guizioliveira/ignite-ui-ts-config": "1.0.0"
   },
   "changesets": [
+    "funny-cats-learn",
     "tough-cycles-wave"
   ]
 }
