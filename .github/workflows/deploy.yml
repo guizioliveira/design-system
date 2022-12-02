@@ -25,9 +25,9 @@ jobs:
           scope: '@guizioliveira'
 
       - run: npm ci
-        with:
-          registry-url: 'https://npm.pkg.github.com/'
-          scope: '@guizioliveira'
+        env: 
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
 
       - run: npm run build
         env:
