@@ -8,8 +8,8 @@ on:
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  deploy:
-    name: Deploy
+  release-and-deploy:
+    name: Packages releases and Storybook deployment
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,12 +24,14 @@ jobs:
           registry-url: 'https://npm.pkg.github.com/'
           scope: '@guizioliveira'
 
-      - run: npm ci
+      - name: Install Dependencies
+        run: npm ci
         env: 
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
 
-      - run: npm run build
+      - name: Build Packages
+        run: npm run build
         env:
           TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           TURBO_TEAM: guizioliveira
@@ -43,7 +45,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Deploy storybook to Github Pages
+      - name: Storybook Deployment
         working-directory: ./packages/docs
         if: steps.changesets.outputs.published == 'true'
         run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
