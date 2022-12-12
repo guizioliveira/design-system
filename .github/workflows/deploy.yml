@@ -40,7 +40,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        
+
       - name: Publish by changesets changes
         id: changesets
         uses: changesets/action@v1
@@ -53,6 +53,7 @@ jobs:
   storybook-deploy:
     name: Storybook Deploy
     runs-on: ubuntu-latest
+    needs: build-packages
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -63,6 +64,11 @@ jobs:
           node-version: 16
           registry-url: 'https://npm.pkg.github.com/'
           scope: '@guizioliveira'
+
+      - name: Install Dependencies
+        run: npm ci
+        env: 
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
 
       - name: Storybook build
         working-directory: ./packages/docs
