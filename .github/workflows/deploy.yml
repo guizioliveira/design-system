@@ -1,15 +1,13 @@
 name: Release and Deploy Storybook
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  release-and-deploy:
-    name: Packages releases and Storybook deployment
+  build-packages:
+    name: Build packages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -27,16 +25,19 @@ jobs:
       - name: Install Dependencies
         run: npm ci
         env: 
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
 
       - name: Build Packages
-        run: npm run build
+        run: npm run build:packages
         env:
           TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           TURBO_TEAM: guizioliveira
 
-      - name: Publish to NPM
+  release-packages:
+    name: Publish to NPM
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish by changesets changes
         id: changesets
         uses: changesets/action@v1
         with:
@@ -45,9 +46,26 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+  storybook-deploy:
+    name: Storybook Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: 'https://npm.pkg.github.com/'
+          scope: '@guizioliveira'
+
+      - name: Storybook build
+        working-directory: ./packages/docs
+        run: npm run build
+
       - name: Storybook Deployment
         working-directory: ./packages/docs
-        if: steps.changesets.outputs.published == 'true'
         run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
         env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}

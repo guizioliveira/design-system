@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
+    "build:packages": "turbo run build --filter=!docs",
     "changeset": "changeset",
     "exit-prerelease": "changeset pre exit",
     "pre-release": "changeset pre enter alpha",
