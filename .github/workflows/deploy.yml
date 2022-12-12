@@ -35,8 +35,12 @@ jobs:
 
   release-packages:
     name: Publish to NPM
+    needs: build-packages
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
       - name: Publish by changesets changes
         id: changesets
         uses: changesets/action@v1
