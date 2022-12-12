@@ -33,26 +33,6 @@ jobs:
           TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           TURBO_TEAM: guizioliveira
 
-  release-packages:
-    name: Publish to NPM
-    needs: build-packages
-    runs-on: ubuntu-latest
-    steps:
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: 'npm'
-          cache-dependency-path: '**/package-lock.json'
-          registry-url: 'https://npm.pkg.github.com/'
-          scope: '@guizioliveira'
-
-      - name: Install Dependencies
-        run: npm ci
-        env: 
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
-
       - name: Publish by changesets changes
         id: changesets
         uses: changesets/action@v1
