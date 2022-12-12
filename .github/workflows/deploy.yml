@@ -73,6 +73,10 @@ jobs:
       - name: Storybook build
         working-directory: ./packages/docs
         run: npm run build
+        env:
+          registry-url: 'https://npm.pkg.github.com/'
+          scope: '@guizioliveira'
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
 
       - name: Storybook Deployment
         working-directory: ./packages/docs
