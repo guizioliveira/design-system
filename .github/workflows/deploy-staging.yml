@@ -15,4 +15,4 @@ jobs:
         run: mkdir staging
         
       - name: Remove staging folder
-        run: rm staging
+        run: sudo rm -r staging
