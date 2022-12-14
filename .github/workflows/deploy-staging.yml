@@ -15,8 +15,8 @@ jobs:
         run: mkdir staging
         
       - name: Copy files to staging
-        run: cp -r -v .\packages\docs\.storybook ./staging |
-             cp -r -v .\packages\docs\src ./staging |
+        run: cp -r -v ./packages/docs/.storybook/ ./staging |
+             cp -r -v ./packages/docs/src/ ./staging |
              cp -v ./packages/docs/package.json ./staging
 
         
