@@ -14,5 +14,9 @@ jobs:
       - name: Create staging folder
         run: mkdir staging
         
+      - name: Copy files to staging
+        run: cp -r .\packages\docs\.storybook ./staging | cp -r .\packages\docs\src ./staging | cp ./packages/docs/package.json ./staging
+
+        
       - name: Remove staging folder
         run: sudo rm -r staging
