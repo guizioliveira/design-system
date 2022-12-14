@@ -28,7 +28,6 @@
   },
   "dependencies": {
     "@storybook/addon-a11y": "^6.5.13",
-    "@guizioliveira/ignite-ui-eslint-config": "*",
     "@guizioliveira/ignite-ui-react": "1.0.0",
     "@guizioliveira/ignite-ui-tokens": "1.0.0",
     "phosphor-react": "^1.4.1",
