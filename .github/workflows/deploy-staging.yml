@@ -16,6 +16,28 @@ jobs:
         
       - name: Copy files to staging
         run: cp -r -v ./packages/docs/.storybook/ ./staging/; cp -r -v ./packages/docs/src/ ./staging/; cp -v ./packages/docs/package.json ./staging/
-        
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
+          registry-url: 'https://npm.pkg.github.com/'
+          scope: '@guizioliveira'
+      
+      - name: Install Dependencies
+        working-directory: ./staging/
+        run: npm ci
+        env: 
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+      
+      - name: Build Storybook
+        working-directory: ./staging/
+        run: npm run build
+        env:
+          TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          TURBO_TEAM: guizioliveira
+      
       - name: Remove staging folder
         run: sudo rm -r staging
