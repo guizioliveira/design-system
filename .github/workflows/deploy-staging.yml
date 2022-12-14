@@ -11,11 +11,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Create staging folder
-        run: mkdir staging
-        
       - name: Copy files to staging
-        run: cp -r -v ./packages/docs/.storybook/ ./staging/; cp -r -v ./packages/docs/src/ ./staging/; cp -v ./packages/docs/package.json ./staging/
+        run: mkdir staging; cp -r -v ./packages/docs/.storybook/ ./staging/; cp -r -v ./packages/docs/src/ ./staging/; cp -v ./packages/docs/package.json ./staging/
       
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -25,6 +22,12 @@ jobs:
           cache-dependency-path: '**/package-lock.json'
           registry-url: 'https://npm.pkg.github.com/'
           scope: '@guizioliveira'
+      
+      - name: Creating .npmrc
+        run: |
+          cat << EOF > "./staging/.npmrc"
+            @guizioliveira:registry=https://npm.pkg.github.com
+          EOF
       
       - name: Install Dependencies
         working-directory: ./staging/
