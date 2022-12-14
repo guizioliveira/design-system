@@ -28,7 +28,7 @@ jobs:
       
       - name: Install Dependencies
         working-directory: ./staging/
-        run: npm ci
+        run: npm install
         env: 
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
       
