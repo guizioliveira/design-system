@@ -6,8 +6,8 @@ on:
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  build:
-    name: Build
+  build-and-release:
+    name: Build & Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -27,36 +27,8 @@ jobs:
         env: 
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
 
-      - name: Build Application
+      - name: Build All Application
         run: npm run build
-        env:
-          TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          TURBO_TEAM: guizioliveira
-
-  release-packages:
-    name: Release packages
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: 'npm'
-          cache-dependency-path: '**/package-lock.json'
-          registry-url: 'https://npm.pkg.github.com/'
-          scope: '@guizioliveira'
-
-      - name: Install Dependencies
-        run: npm ci
-        env: 
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
-
-      - name: Build Packages
-        run: npm run build:packages
         env:
           TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           TURBO_TEAM: guizioliveira
@@ -70,10 +42,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Send a message if a publish not happens
+        if: steps.changesets.outputs.published = "false"
+        run: echo "Error"
+
   storybook-deploy-staging:
     name: Storybook deploy / Staging
     runs-on: ubuntu-latest
-    needs: release-packages
+    needs: build-and-release
     steps:
       - name: Checkout
         uses: actions/checkout@v3
