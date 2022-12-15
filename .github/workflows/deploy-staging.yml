@@ -1,4 +1,4 @@
-name: Deploy Storybook on Staging
+name: Deploy Storybook / Staging
 
 on:
   workflow_dispatch:
@@ -23,15 +23,9 @@ jobs:
           registry-url: 'https://npm.pkg.github.com/'
           scope: '@guizioliveira'
       
-      - name: Creating .npmrc
-        run: |
-          cat << EOF > "./staging/.npmrc"
-            @guizioliveira:registry=https://npm.pkg.github.com
-          EOF
-      
       - name: Install Dependencies
         working-directory: ./staging/
-        run: npm install
+        run: npm i --legacy-peer-deps
         env: 
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
       
@@ -41,6 +35,9 @@ jobs:
         env:
           TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           TURBO_TEAM: guizioliveira
-      
-      - name: Remove staging folder
-        run: sudo rm -r staging
+
+      - name: Storybook Deployment / Github Pages
+        working-directory: ./staging/
+        run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
+        env:
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
