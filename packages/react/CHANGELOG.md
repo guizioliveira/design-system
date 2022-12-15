@@ -1,6 +1,6 @@
 # @guizioliveira/ignite-ui-react
 
-## 0.9.0
+## 1.1.0
 
 ### Minor Changes
 
