@@ -71,5 +71,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   storybook-deploy-staging:
+    name: Storybook deployment / Staging
     uses: guizioliveira/design-system/workflows/deploy-staging.yml@v1
     needs: release-packages
