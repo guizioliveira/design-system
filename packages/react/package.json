@@ -13,12 +13,9 @@
     "dev": "tsup src/index.tsx --format esm, cjs --dts --external react --watch",
     "lint": "eslint src/**/*.ts* --fix"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com/user/repo.git",
+    "url": "https://github.com/guizioliveira/design-system.git",
     "directory": "packages/react"
   },
   "keywords": [],
