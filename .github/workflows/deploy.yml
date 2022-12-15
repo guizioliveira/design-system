@@ -28,7 +28,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
 
       - name: Build All Application
-        run: npm run build
+        run: npm run build:packages
         env:
           TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           TURBO_TEAM: guizioliveira
