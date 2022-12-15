@@ -1,4 +1,4 @@
-name: Deploy
+name: NPM Release & Deploy
 
 on:
   workflow_dispatch:
@@ -71,6 +71,38 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   storybook-deploy-staging:
-    name: Storybook deployment / Staging
-    uses: guizioliveira/design-system/workflows/deploy-staging.yml@v1
+    name: Storybook deploy / Staging
+    runs-on: ubuntu-latest
     needs: release-packages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Copy files to staging
+        run: mkdir staging; cp -r -v ./packages/docs/.storybook/ ./staging/; cp -r -v ./packages/docs/src/ ./staging/; cp -v ./packages/docs/package.json ./staging/
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: 'https://npm.pkg.github.com/'
+          scope: '@guizioliveira'
+      
+      - name: Install Dependencies
+        working-directory: ./staging/
+        run: npm i --legacy-peer-deps
+        env: 
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+      
+      - name: Build Storybook
+        working-directory: ./staging/
+        run: npm run build
+        env:
+          TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          TURBO_TEAM: guizioliveira
+
+      - name: Storybook Deployment / Github Pages
+        working-directory: ./staging/
+        run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
+        env:
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
