@@ -1,0 +1,2 @@
+import{B as o,T as r}from"./index.c87977dd.js";import{j as t}from"./jsx-runtime.3c1f6e88.js";import"./index.be1f6896.js";import"./iframe.efa3db73.js";import"./index.4602a726.js";const i={title:"Layout/Box",component:o,argTypes:{children:{control:{type:null}}},args:{children:t(r,{children:"Component Box test"})},parameters:{layout:"centered"}},p={},c=["Primary"];export{p as Primary,c as __namedExportsOrder,i as default};
+//# sourceMappingURL=Box.stories.129d3f3b.js.map

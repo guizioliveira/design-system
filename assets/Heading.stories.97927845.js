@@ -1,0 +1,2 @@
+import{H as e}from"./index.c87977dd.js";import"./index.be1f6896.js";import"./iframe.efa3db73.js";import"./index.4602a726.js";import"./jsx-runtime.3c1f6e88.js";const i={title:"Typography/Heading",component:e,args:{size:"md",children:"Heading"},argTypes:{size:{options:["sm","md","lg","xl","2xl","4xl","5xl","6xl"],control:{type:"select"}}},parameters:{layout:"centered"}},n={},l={args:{as:"h1",children:"H1 Heading",size:"lg"}},m=["Primary","CustonTag"];export{l as CustonTag,n as Primary,m as __namedExportsOrder,i as default};
+//# sourceMappingURL=Heading.stories.97927845.js.map
