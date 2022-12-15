@@ -72,3 +72,4 @@ jobs:
 
   storybook-deploy-staging:
     uses: guizioliveira/design-system/workflows/deploy-staging.yml@v1
+    needs: release-packages
