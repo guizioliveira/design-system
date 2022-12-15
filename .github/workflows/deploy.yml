@@ -43,7 +43,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Send a message if a publish not happens
-        if: steps.changesets.outputs.published == "false"
+        if: steps.changesets.outputs.published == false
         run: echo "Error"
 
   storybook-deploy-staging:
