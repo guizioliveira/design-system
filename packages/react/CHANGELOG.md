@@ -1,5 +1,11 @@
 # @guizioliveira/ignite-ui-react
 
+## 1.1.0
+
+### Minor Changes
+- New Components:
+  - Tooltip
+
 ## 1.0.0
 
 ### Major Changes
