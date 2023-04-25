@@ -13,12 +13,23 @@ function ToastStory(props : ToastProps) {
   )
 }
 
+function oneWeekAway() {
+  const now = new Date()
+  const nextWeek = now.setDate(now.getDate() + 7)
+
+  return prettyDate(new Date(nextWeek))
+}
+
+function prettyDate(date : Date) {
+  return new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'short' }).format(date);
+}
+
 export default {
   title: 'Feedback/Toast',
   component: ToastStory,
   args: {
-    title: "Teste",
-    description: "Hello! I'm a tooltip 👋",
+    title: "Weekly Team Meeting",
+    description: `🕐 Scheduled to ${oneWeekAway()}`,
     durationInSeconds: 5
   },
   argTypes: {
