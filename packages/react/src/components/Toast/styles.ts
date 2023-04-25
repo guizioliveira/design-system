@@ -25,9 +25,9 @@ const swipeOut = keyframes({
 })
 
 export const ToastRoot = styled(Root, {
-  padding: "$3 $4",
+  padding: "$3 $5",
   background: "$gray800",
-  border: "1px solid $gray600",
+  border: "2px solid $gray600",
   borderRadius: "$sm",
   fontFamily: "$default",
   position: "relative",

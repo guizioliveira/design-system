@@ -27,7 +27,7 @@ export function Toast({
         <ToastTitle>{title}</ToastTitle>
         {description && <ToastDescription>{description}</ToastDescription>}
         <ToastClose asChild>
-          <X weight="light" />
+          <X weight="regular" size={20} />
         </ToastClose>
       </ToastRoot>
       <ToastViewPort />
