@@ -13,6 +13,14 @@ export default {
       control: {
         type: null,
       },
+      table: {
+        type: { summary: 'ReactNode' }
+      }
+    },
+    content: {
+      table: {
+        type: { summary: 'ReactNode' }
+      }
     }
   },
   decorators: [
