@@ -25,9 +25,7 @@ export function Toast({
     <ToastRadix.Provider swipeDirection="right">
       <ToastRoot {...props} duration={durationInSeconds * 1000}>
         <ToastTitle>{title}</ToastTitle>
-        {description && (
-          <ToastDescription asChild>{description}</ToastDescription>
-        )}
+        {description && <ToastDescription>{description}</ToastDescription>}
         <ToastClose asChild>
           <X weight="light" />
         </ToastClose>
