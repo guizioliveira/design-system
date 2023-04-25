@@ -1,11 +1,17 @@
 # @guizioliveira/ignite-ui-react
 
+## 1.2.1
+
+### Patch Changes
+
+- Adjusting Toast style
+
 ## 1.2.0
 
 ### Minor Changes
 
-- - New Components
-    - Toast
+- New Components
+  - Toast
 
 ## 1.1.0
 
