@@ -4,18 +4,18 @@
 
 ### Patch Changes
 
-- - Export styles properties
-  - Components
-    - Avatar
-      - Avatar size increase
-    - Box
-      - Box padding increase
-    - Button
-      - Add boxShadow when Button is in focus
-    - Checkbox
-      - Add border when Checkbox is checked
-    - TextInput
-      - Add option to pass reference to TextInput and adjust some styles
+- Export styles properties
+- Components
+  - Avatar
+    - Avatar size increase
+  - Box
+    - Box padding increase
+  - Button
+    - Add boxShadow when Button is in focus
+  - Checkbox
+    - Add border when Checkbox is checked
+  - TextInput
+    - Add option to pass reference to TextInput and adjust some styles
 
 ## 1.2.1
 
