@@ -1,5 +1,11 @@
 # @guizioliveira/ignite-ui-react
 
+## 1.2.3
+
+### Patch Changes
+
+- Extend size atribute to TextInput
+
 ## 1.2.2
 
 ### Patch Changes

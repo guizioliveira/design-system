@@ -1,5 +1,11 @@
 # @guizioliveira/ignite-ui-tokens
 
+## 1.0.1
+
+### Patch Changes
+
+- Change package`s private to false
+
 ## 1.0.0
 
 ### Major Changes

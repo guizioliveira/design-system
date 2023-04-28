@@ -1,11 +1,14 @@
 {
   "name": "@guizioliveira/ignite-ui-tokens",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "files": ["./dist/**"],
+  "private": false,
+  "files": [
+    "./dist/**"
+  ],
   "scripts": {
     "build": "tsup src/index.ts --format esm, cjs --dts",
     "dev": "tsup src/index.ts --format esm, cjs --dts --watch",
@@ -17,7 +20,7 @@
     "directory": "packages/tokens"
   },
   "keywords": [],
-  "author": "",
+  "author": "Guilherme de Oliveira",
   "license": "MIT",
   "devDependencies": {
     "@guizioliveira/ignite-ui-ts-config": "*",
