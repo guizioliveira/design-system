@@ -1,5 +1,11 @@
 # @guizioliveira/ignite-ui-react
 
+## 1.2.4
+
+### Patch Changes
+
+- Updating depencencies token
+
 ## 1.2.3
 
 ### Patch Changes
