@@ -1,5 +1,11 @@
 # @guizioliveira/ignite-ui-tokens
 
+## 1.1.0
+
+### Minor Changes
+
+- New color danger-light
+
 ## 1.0.1
 
 ### Patch Changes
