@@ -1,0 +1,2 @@
+import{A as t}from"./index.e5bf3c87.js";import"./index.df15624d.js";import"./iframe.e330c53b.js";import"./index.482b1f38.js";import"./jsx-runtime.e551046a.js";const s={title:"data display/Avatar",component:t,args:{src:"https://github.com/guizioliveira.png",alt:"Guilherme de Oliveira"},argTypes:{control:{type:"text"}},parameters:{layout:"centered"}},p={},l={args:{src:void 0}},m=["Primary","WithFallback"];export{p as Primary,l as WithFallback,m as __namedExportsOrder,s as default};
+//# sourceMappingURL=Avatar.stories.306aa9fe.js.map
