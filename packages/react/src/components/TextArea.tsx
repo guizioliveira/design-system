@@ -7,6 +7,7 @@ export const TextArea = styled('textarea', {
   borderRadius: '$sm',
   boxSizing: 'border-box',
   border: '2px solid $gray900',
+  transition: 'border ease 0.2s',
 
   fontFamily: '$default',
   fontSize: '$sm',
