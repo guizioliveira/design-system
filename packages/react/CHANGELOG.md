@@ -1,5 +1,11 @@
 # @guizioliveira/ignite-ui-react
 
+## 1.3.0
+
+### Minor Changes
+
+- Add transition effects to `Button`, `TextArea` and `TextInput` components
+
 ## 1.2.4
 
 ### Patch Changes
